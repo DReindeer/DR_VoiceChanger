@@ -1,0 +1,10 @@
+*.exe
+*.cache
+*.dll
+*.log
+*.pdb
+*.ipch
+DirectX11/.vs/
+DirectX11/Debug/
+DirectX11/Release/
+DirectX11/Temp/
