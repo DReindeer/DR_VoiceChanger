@@ -1,3 +1,192 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="data\SHADER\ps.hlsl">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="data\SHADER\ps2DTex.hlsl">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="data\SHADER\psTex.hlsl">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="data\SHADER\vs2D.hlsl">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="data\SHADER\vs3D.hlsl">
+      <Filter>shader</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\manager.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\utility.cpp" />
+    <ClCompile Include="src\scene.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene2D.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene3D.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene3DPoly.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sceneBox.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sceneXModel.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sceneXModelListener.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input.cpp">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inputKeyboard.cpp">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inputMouse.cpp">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inputXInput.cpp">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mainController.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modelManager.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texManager.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XModelLoader.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wMath.cpp" />
+    <ClCompile Include="src\camera.cpp">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Light.cpp">
+      <Filter>light</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\manager.h" />
+    <ClInclude Include="src\renderer.h" />
+    <ClInclude Include="src\utility.h" />
+    <ClInclude Include="src\sceneXModelListener.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene2D.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene3D.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene3DPoly.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sceneBox.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sceneXModel.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\input.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inputKeyboard.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inputMouse.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inputXInput.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mainController.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modelManager.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\texManager.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XModelLoader.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wMath.h" />
+    <ClInclude Include="src\camera.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Light.h">
+      <Filter>light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2Core.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2Listener.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2LoadOgg.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2LoadWave.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2Manager.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2MasteringVoice.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2SoundResourceManager.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2SourceVoice2D.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2SourceVoice3D.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2SourceVoiceInterface.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2SourceVoiceManager.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="shader">
+      <UniqueIdentifier>{8194c433-70fa-4b01-b8f8-0fab92569b0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{a21625bb-4644-47d1-859c-c90b087d944c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input">
+      <UniqueIdentifier>{aeb82159-aead-4bf5-a035-1bbbbc806ca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="manager">
+      <UniqueIdentifier>{e5dcb85a-9f47-47d5-a184-47b4f441ec51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="camera">
+      <UniqueIdentifier>{63fa5b68-e545-4a8b-9a41-4d579db02b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="light">
+      <UniqueIdentifier>{f432b992-9659-4146-a14d-a666f5e69ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xa2_dll">
+      <UniqueIdentifier>{71b8ca95-3245-4ae1-8b05-3c7f15e5e5f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>

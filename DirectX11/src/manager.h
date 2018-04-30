@@ -3,7 +3,14 @@
 #define _MANAGER_H_
 
 #include "main.h"
-#include "xa2Manager.h"
+
+#if _DEBUG
+#pragma comment(lib, "../Libs/DR_XA2/lib/DR_XA2_Debug.lib")
+#else
+#pragma comment(lib, "../Libs/DR_XA2/lib/DR_XA2_Release.lib")
+#endif
+
+#include "../Libs/DR_XA2/xa2Manager.h"
 
 class CRenderer;
 class CCamera;

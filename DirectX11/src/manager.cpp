@@ -25,10 +25,10 @@
 #include "sceneXModelListener.h"
 
 // XAudio2
-#include "xa2Manager.h"
-#include "xa2SourceVoiceManager.h"
-#include "xa2SourceVoice2D.h"
-#include "xa2SoundResourceManager.h"
+#include "../Libs/DR_XA2/xa2Manager.h"
+#include "../Libs/DR_XA2/xa2SourceVoiceManager.h"
+#include "../Libs/DR_XA2/xa2SourceVoice2D.h"
+#include "../Libs/DR_XA2/xa2SoundResourceManager.h"
 
 
 // ======== ======== ======== ======== ======== ======== ======== ========
