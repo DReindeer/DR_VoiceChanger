@@ -42,10 +42,15 @@ void CSceneXModelListener::Uninit(void)
 // -------- -------- -------- -------- -------- -------- -------- --------
 void CSceneXModelListener::Update(void)
 {
-	// リスナー取得
+	// リスナーの設定
 	XA2Listener *pListener = XA2Manager::GetListenerManager()->GetListener(this);
-
-	//pListener->SetFront()
+	if (pListener)
+	{
+		pListener->SetPos(m_pos);
+		XMFLOAT3 flont = XM::F3::Normalize(XMFLOAT3(cos(m_rot.y), 0.f, sin(m_rot.y)));
+		pListener->SetFront(flont);
+		pListener->SetTop(XMFLOAT3(0.f, 1.f, 0.f));
+	}
 }
 
 // -------- -------- -------- -------- -------- -------- -------- --------
