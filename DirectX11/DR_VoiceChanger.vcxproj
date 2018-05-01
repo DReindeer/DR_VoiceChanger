@@ -11,8 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Libs\DR_XA2\wMath.h" />
     <ClInclude Include="..\Libs\DR_XA2\xa2Core.h" />
     <ClInclude Include="..\Libs\DR_XA2\xa2Listener.h" />
+    <ClInclude Include="..\Libs\DR_XA2\xa2ListenerManager.h" />
     <ClInclude Include="..\Libs\DR_XA2\xa2LoadOgg.h" />
     <ClInclude Include="..\Libs\DR_XA2\xa2LoadWave.h" />
     <ClInclude Include="..\Libs\DR_XA2\xa2Manager.h" />

@@ -23,6 +23,7 @@ class XA2Core;
 class XA2MasteringVoice;
 class XA2SourceVoiceManager;
 class XA2SoundResourceManager;
+class XA2ListenerManager;
 class XA2LoadWaveOnAll;
 class XA2LoadWaveStreaming;
 class XA2LoadOggOnAll;
@@ -44,6 +45,7 @@ public:
 	static XA2MasteringVoice *GetMasteringVoice() { return m_pMaster; }								// マスタリングボイス
 	static XA2SourceVoiceManager *GetSourceVoiceManager() { return m_pSourceVoiceManager; }			// サウンドオブジェクトマネージャ
 	static XA2SoundResourceManager *GetSoundResourceManager() { return m_pSoundResourceManager; }	// サウンドリソースマネージャ
+	static XA2ListenerManager *GetListenerManager() { return m_pListenerManager; }					// リスナーマネージャ
 	static XA2LoadWaveOnAll *GetLoadWaveOnAll() { return m_pLoadWaveOnAll; }						// wave読み込み - CPU全のせ
 	static XA2LoadWaveStreaming *GetLoadWaveStreaming() { return m_pLoadWaveStreaming; }			// wave読み込み - ストリーミング
 	static XA2LoadOggOnAll *GetLoadOggOnAll() { return m_pLoadOggOnAll; }							// ogg読み込み - CPU全のせ
@@ -70,6 +72,7 @@ private:
 	static XA2MasteringVoice *m_pMaster;						// マスタリングボイス
 	static XA2SourceVoiceManager *m_pSourceVoiceManager;		// サウンドオブジェクトマネージャ
 	static XA2SoundResourceManager *m_pSoundResourceManager;	// サウンドリソースマネージャ
+	static XA2ListenerManager *m_pListenerManager;				// リスナーマネージャ
 	static XA2LoadWaveOnAll *m_pLoadWaveOnAll;					// wave読み込み - CPU全のせ
 	static XA2LoadWaveStreaming *m_pLoadWaveStreaming;			// wave読み込み - ストリーミング
 	static XA2LoadOggOnAll *m_pLoadOggOnAll;					// ogg読み込み - CPU全のせ

@@ -29,12 +29,6 @@ public:
 	void Update(void);				// 更新
 	void Draw(void);				// 描画
 	static CSceneXModelListener *Create(const XMFLOAT3 &pos, const XMFLOAT3 &rot, const XMFLOAT3 &scl, const std::string &strFilePass, int priority = 4);
-
-	XA2Listener *GetListener() { return m_pListener; }
-
-private:
-	// リスナー
-	XA2Listener *m_pListener = nullptr;
 };
 
 #endif

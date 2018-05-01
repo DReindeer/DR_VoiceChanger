@@ -132,10 +132,16 @@
     <ClInclude Include="src\Light.h">
       <Filter>light</Filter>
     </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\wMath.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
     <ClInclude Include="..\Libs\DR_XA2\xa2Core.h">
       <Filter>xa2_dll</Filter>
     </ClInclude>
     <ClInclude Include="..\Libs\DR_XA2\xa2Listener.h">
+      <Filter>xa2_dll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libs\DR_XA2\xa2ListenerManager.h">
       <Filter>xa2_dll</Filter>
     </ClInclude>
     <ClInclude Include="..\Libs\DR_XA2\xa2LoadOgg.h">

@@ -1,13 +1,12 @@
 //================================================================================
 //
 // Auter : KENSUKE WATANABE
-// Data  : 2018/02/12
 //
 //================================================================================
 #ifndef _XA2LISTENER_H_
 #define _XA2LISTENER_H_
 
-#include <assert.h>
+#include <array>
 #include "math.h"
 #include "Wmath.h"
 // XAudio2
@@ -18,7 +17,6 @@
 //--------------------------------------------------------------------------------
 static const float DEFAULT_LISTENER_LPF = 0.5f;
 static const float DEFAULT_LISTENER_REVERB = 0.5f;
-static const int MAX_LISTENER = 1;
 
 // 3Dリスナー
 //--------------------------------------------------------------------------------
@@ -31,6 +29,9 @@ public:
 	// 取得
 	//--------------------------------------------------------------------------------
 	X3DAUDIO_LISTENER *GetListener() { return &m_listener; }
+
+	// ID
+	void *GetID() { return m_id; }
 
 	// 設定
 	//--------------------------------------------------------------------------------
@@ -53,9 +54,13 @@ public:
 	void SetConeLPF(float innerLPF, float outerLPF);
 	void SetConeReverb(float innerReverb, float outerReverb);
 
+	// ID
+	void SetID(void *thisPointerID) { m_id = thisPointerID; }
+
 protected:
 	X3DAUDIO_LISTENER m_listener = {};	// リスナー
-	static int m_numListener;
+
+	void* m_id = nullptr;
 };
 
 #endif

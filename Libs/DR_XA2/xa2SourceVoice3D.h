@@ -19,16 +19,6 @@
 static const float DEFAULT_LPF = 0.5f;
 static const float DEFAULT_REVERB = 0.5f;
 
-
-// 3Dソースボイスデータ : [継承]ソースボイスデータ
-//--------------------------------------------------------------------------------
-class XA2SourceVoiceData3D : public XA2SourceVoiceData
-{
-public:
-
-private:
-};
-
 // 3Dソースボイス : [継承]ソースボイスインターフェイス
 //--------------------------------------------------------------------------------
 class XA2SourceVoice3D : public XA2SourceVoiceInterface
@@ -76,9 +66,6 @@ public:
 	// 内部角度(上下へ音が広がる時の角度)
 	void SetInnerRadiusAngle(const float &innerRadiusAngle) { m_emitter.InnerRadiusAngle = (FLOAT32)min(innerRadiusAngle, X3DAUDIO_PI / 4.0); }
 
-	// リスナーの設定
-	void SetListener(X3DAUDIO_LISTENER *pListener) { m_pListener = pListener; }
-
 protected:
 	// エミッター
 	X3DAUDIO_EMITTER m_emitter = { 0 };
@@ -87,8 +74,6 @@ protected:
 	FLOAT32 m_matrixCoefficients[INPUTCHANNELS * OUTPUTCHANNELS] = { 0 };
 
 	static FLOAT32 DefaultMatrixCoefficients[12];
-
-	static X3DAUDIO_LISTENER *m_pListener;
 };
 
 #endif

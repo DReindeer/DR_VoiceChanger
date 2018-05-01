@@ -16,6 +16,7 @@
 #include "camera.h"
 #include "utility.h"
 
+#include "../Libs/DR_XA2/xa2ListenerManager.h"
 #include "../Libs/DR_XA2/xa2Listener.h"
 
 // -------- -------- -------- -------- -------- -------- -------- --------
@@ -41,7 +42,10 @@ void CSceneXModelListener::Uninit(void)
 // -------- -------- -------- -------- -------- -------- -------- --------
 void CSceneXModelListener::Update(void)
 {
+	// リスナー取得
+	XA2Listener *pListener = XA2Manager::GetListenerManager()->GetListener(this);
 
+	//pListener->SetFront()
 }
 
 // -------- -------- -------- -------- -------- -------- -------- --------
@@ -73,6 +77,11 @@ CSceneXModelListener *CSceneXModelListener::Create(const XMFLOAT3 &pos, const XM
 
 	// 頂点, シェーダーの作成
 	pXModel->CreateVtxBuffer();
+
+	// リスナーの設定
+	XA2Listener *pListener = new XA2Listener;
+	pListener->SetCone(X3DAUDIO_PI, 2.f, 1.5f);
+	XA2Manager::GetListenerManager()->AddListener(pListener, pXModel);
 
 	return pXModel;
 }
